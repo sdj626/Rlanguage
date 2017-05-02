@@ -1,0 +1,29 @@
+getwd() #获取当前工作目录
+setwd("c:/") #设置当前工作目录为c:/根目录
+ls() #列出当前工作空间的对象
+a<-c(1:10,2) #赋值一个变量
+rm(a) #删除一个变量
+help(options) #显示可用选项的说明
+options()
+history() #显示最近使用的N个命令
+savehistory("hist.Rhistory")
+loadhistory("hist.Rhistory")
+save.image("aa.Rdata")  #保存工作空间到aa.Rdata中
+save(a,file="a.Rdata")
+load("a.Rdata")
+a<-c('a','b','c') #向量中的值为相同类型
+m<-matrix(1:20,nrow = 5,ncol = 4,byrow = T,
+          dimnames = list(c('r1','r2','r3','r4','r5'),c("c1","c2","c3","c4")))
+
+
+?cut()
+Z <- stats::rnorm(10000)
+table(cut(Z, breaks = -6:6))
+sum(table(cut(Z, breaks = -6:6, labels = FALSE)))
+sum(graphics::hist(Z, breaks = -6:6, plot = FALSE)$counts)
+cut(Z, breaks = seq(-6,6,by=2))
+seq(-6,6,by=2)
+table(cut(Z, breaks = seq(-6,6,by=2)))
+install.packages(c('car','doBy'))
+library(car)
+?recode()
